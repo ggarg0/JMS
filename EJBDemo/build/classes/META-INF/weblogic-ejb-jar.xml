@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wls:weblogic-ejb-jar xmlns:wls="http://xmlns.oracle.com/weblogic/weblogic-ejb-jar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd http://xmlns.oracle.com/weblogic/weblogic-ejb-jar http://xmlns.oracle.com/weblogic/weblogic-ejb-jar/1.2/weblogic-ejb-jar.xsd">
+    <wls:weblogic-enterprise-bean>
+	<wls:ejb-name>AccountBean</wls:ejb-name>
+	<wls:stateful-session-descriptor>
+		<wls:stateful-session-cache>
+			<wls:max-beans-in-cache>5</wls:max-beans-in-cache>
+			<wls:idle-timeout-seconds>5</wls:idle-timeout-seconds>
+		</wls:stateful-session-cache>
+	</wls:stateful-session-descriptor>
+</wls:weblogic-enterprise-bean>
+</wls:weblogic-ejb-jar>
