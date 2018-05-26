@@ -12,7 +12,7 @@ import com.gaurav.Interceptor.SimpleInterceptor;
 
 /**
  * Session Bean implementation class AccountStatelessBean
- * @Interceptors(SimpleInterceptor.class)
+ * @Interceptors(SimpleInterceptor.class) ---- TEST
  */
 
 @Stateful(mappedName="Account")
@@ -20,14 +20,14 @@ import com.gaurav.Interceptor.SimpleInterceptor;
 public class AccountStatefulBean implements AccountStatefulBeanRemote, AccountStatefulBeanLocal {
 
 	public int total=1000;
-	
+
 	@PostActivate
 	public void PostActivate()
 	{
 		total= total + 5000;
 		System.out.println("@PostActivate : " + total);
 	}
-	
+
 	@PreDestroy
 	public void PreDestroy() {
 		System.out.println("@@PreDestroy : " + total);
@@ -37,13 +37,13 @@ public class AccountStatefulBean implements AccountStatefulBeanRemote, AccountSt
 	public void PostConstruct() {
 		System.out.println("@@PostConstruct : " + total);
 	}
-	
+
 	@PrePassivate
 	public void prePassivate() {
 		System.out.println("@@PrePassivate : " + total);
 	}
 
-	
+
     public AccountStatefulBean() {
         // TODO Auto-generated constructor stub
     }
@@ -52,7 +52,7 @@ public class AccountStatefulBean implements AccountStatefulBeanRemote, AccountSt
 	public void deposit(int amt) {
 		total=total+amt;
 		System.out.println("Total balance after deposit : " + total);
-		
+
 	}
 
 	@Override
